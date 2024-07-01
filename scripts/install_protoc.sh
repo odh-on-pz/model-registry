@@ -12,6 +12,8 @@ fi
 ARCH="x86_64"
 if [[ "$(uname -m)" == "arm"* ]]; then
   ARCH="aarch_64"
+elif [[ "$(uname -m)" == "ppc64le" ]]; then
+  ARCH="ppcle_64"
 fi
 
 mkdir -p ${SCRIPT_DIR}/../bin
